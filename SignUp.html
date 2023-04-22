@@ -16,21 +16,32 @@
     <div class="SignUp_form_container">
       <div class="SignUp_form">
         <h3>Sign Up</h3>
+        <form action="connect.php" method="post">
         <div class="input_group">
           <i class="fa fa-user"></i>
-          <input type="text" placeholder="Username" class="input_text" autocomplete="off"/>
+          <input type="text" placeholder="Name" class="input_text" autocomplete="off" name="name"/>
         </div>
         <div class="input_group">
-          <i class="fa fa-user"></i>
-          <input type="text" placeholder="Email Id" class="input_text" autocomplete="off"/>
+          <i class="fa fa-envelope"></i>
+          <input type="text" placeholder="Email Id" class="input_text" autocomplete="off" name="emailId"/>
+        </div>
+        <div class="input_group">
+          <i class="fa fa-phone"></i>
+          <input type="mobnum" placeholder="Mobile Number" class="input_text" autocomplete="off" name="MobileNum"/>
         </div>
         <div class="input_group">
           <i class="fa fa-unlock-alt"></i>
-          <input type="password" placeholder="Password" class="input_text" autocomplete="off"/>
+          <input type="password" placeholder="Password" class="input_text" autocomplete="off" name="password"/>
         </div>
+        <div class="input_group">
+          <i class="fa fa-unlock-alt"></i>
+          <input type="password" placeholder="Confirm Password" class="input_text" autocomplete="off" name="confirmpassword"/>
+        </div>
+
         <div class="button_group" id="SignUp_button">
-          <a>Submit</a>
+          <input type="submit" class="btn btn-primary">
         </div>
+      </form>
         <div class="fotter">
           <a>Already have an account ?</a>
           <a href="login.htm">Log In</a>
