@@ -6,25 +6,111 @@
   body{
       width: 100%;
       height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       letter-spacing: 1px;
       background-color: #0c1022;
   }
-  .SignUp_form_container{
-      position: relative;
-      width: 400px;
-      height: 470px;
-      max-width: 400px;
-      max-height: 470px;
-      background: #040717;
-      border-radius: 50px 5px;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+    height: 80px;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    list-style: none;
+  }
+  
+  .nav-links li a {
+    color: #ee2121;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+  }
+  
+  .nav-links li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-links li a:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .nav-links li a:hover {
+    color: #22664f;
+    font-size: 22px;
+    background-color: #ee2121;
+    border-radius: 8px;
+    padding: 4px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      right: 0px;
+      height: 92vh;
+      top: 80px;
+      background-color: #333;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      margin-top: 70px;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+    }
+  
+    .nav-links li {
+      opacity: 0;
+    }
+  
+  }
+  
+  .nav-active {
+    transform: translateX(0%);
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  .SignUp_form_container{
+    position: relative;
+    width: 400px;
+    height: 600px;
+    max-width: 400px;
+    max-height: 600px;
+    background: rgb(4, 7, 23);
+    border-radius: 50px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0px 490px;
+    margin-top: 40px;
   }
   .SignUp_form_container::before{
       
@@ -100,28 +186,29 @@
   
   }
   #SignUp_button{
-      position: relative;
-      width: 300px;
-      height: 40px;
-      transition: 1s;
-      margin-top: 50px;
-  }
-  #SignUp_button a{
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      text-decoration: none;
-      z-index: 10;
-      cursor: pointer;
-      font-size: 22px;
-      letter-spacing: 2px;
-      border: 1px solid #00ccff;
-      border-radius: 50px;
-      background-color: #0c1022;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
+    position: relative;
+    width: 300px;
+    height: 40px;
+    transition: 1s;
+    margin-top: 50px;
+}
+#SignUp_button input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #00ccff52;
+    z-index: 10;
+    cursor: pointer;
+    font-size: 22px;
+    letter-spacing: 2px;
+    border: 1px solid #00ccff;
+    border-radius: 50px;
+    background-color: #0c1022;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
   .fotter {
       margin-top: 30px;
       display: flex;
