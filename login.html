@@ -1,35 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animated Login From</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="login.css" />
-  </head>
-  <body>
-    <div class="login_form_container">
-      <div class="login_form">
-        <h2>Login</h2>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animated Login From</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="logo"><img src="osdc img18.png" style="width: 100px" height="80px"></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="login.html">Logout/Login</a></li>
+    </ul>
+  </nav>
+  <div class="login_form_container">
+    <div class="login_form">
+      <h2>Login</h2>
+      <form action="index.html" id="myForm" onsubmit="return validateForm()">
         <div class="input_group">
-          <i class="fa fa-user"></i>
-          <input type="text" placeholder="Username" class="input_text" autocomplete="off"/>
+          <i class="fa fa-envelope"></i>
+          <input type="email" placeholder="Email ID" class="input_text" id="name" autocomplete="off" />
         </div>
         <div class="input_group">
           <i class="fa fa-unlock-alt"></i>
-          <input type="password" placeholder="Password" class="input_text" autocomplete="off"/>
+          <input type="password" placeholder="Password" class="input_text" id="password" autocomplete="off" />
         </div>
         <div class="button_group" id="login_button">
-          <a>Submit</a>
+          <input type="submit" class="btn btn-primary">
         </div>
-        <div class="fotter">
-          <a>Forgot Password ?</a>
-          <a href="SignUp.html" >Sign Up</a>
-        </div>
+      </form>
+      <div class="fotter">
+        <a href="forgotpswd.html">Forgot Password ?</a>
+        <a href="SignUp.html">Sign Up</a>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="login.js"></script>
-  </body>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="login.js"></script>
+</body>
+
 </html>
