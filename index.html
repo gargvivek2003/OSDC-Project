@@ -6,51 +6,61 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>navbar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <nav>
-    <div class="logo">Logo</div>
+    <div class="logo"><img src="osdc img18.png" style="width: 100px" height="80px"></div>
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="login.html">Login/Logout</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#storing">About</a></li>
+      <li><a href="#footer1">Contact</a></li>
+      <li><a href="login.html">Logout/Login</a></li>
     </ul>
   </nav>
 
   <div class="slideshow-container">
+    <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
       <div class="numbertext">1 / 5</div>
       <img src="osdc img5.jpeg" style="width:1050px" height="500px">
+      <!-- <div class="text">Caption Text</div> -->
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">2 / 5</div>
       <img src="osdc img6.jpeg" style="width:1050px" height="500px">
+      <!-- <div class="text">Caption Two</div> -->
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">3 / 5</div>
       <img src="osdc img7.jpeg" style="width:1050px" height="500px">
+      <!-- <div class="text">Caption Three</div> -->
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">4 / 5</div>
       <img src="osdc img8.jpeg" style="width:1050px" height="500px">
+      <!-- <div class="text">Caption Four</div> -->
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">5 / 5</div>
       <img src="osdc img9.jpeg" style="width:1050px" height="500px">
+      <!-- <div class="text">Caption Five</div> -->
     </div>
+
+    <!-- Next and previous buttons -->
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
   <br>
 
+  <!-- The dots/circles -->
   <div style="text-align:center">
     <span class="dot" onclick="currentSlide(1)"></span>
     <span class="dot" onclick="currentSlide(2)"></span>
@@ -66,8 +76,9 @@
           <img href = "#" src = https://i0.wp.com/iastoday.in/wp-content/uploads/2018/03/prebook-now-sticker.png?ssl height="200px" width="200px">
         </div>
         <div class = content>
-          <h3>This is content</h3>
-          <p>DIn publishing and graphic design,Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+          <h3>Find my car</h3>
+          <p>Want to know the location of your car ? Here is a feature for you scan the QR sent on your registerd mail id or enter the enter the unique parking code and get the directions to your car.</p>
+
         </div>
       </div>    
     </div>
@@ -75,11 +86,13 @@
     <div class = container>
       <div class = card>
         <div class = image>
-          <img href = "#" src =https://play-lh.googleusercontent.com/nkYboouZW9Qvsb2sXMYdT0iFN9Uhqm11EztbMUnbL3t51fsP-bZJAjEjzZj_MfkIYcvd height="200px" width="200px">
+          <a href="scanqr.html">
+            <img href = "" src =https://play-lh.googleusercontent.com/nkYboouZW9Qvsb2sXMYdT0iFN9Uhqm11EztbMUnbL3t51fsP-bZJAjEjzZj_MfkIYcvd height="200px" width="200px">
+          </a>
         </div>
         <div class = content>
-          <h3>This is content</h3>
-          <p>DIn publishing and graphic design,Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+          <h3>Find my car</h3>
+          <p>Want to know the location of your car ? Here is a feature for you scan the QR sent on your registerd mail id or enter the enter the unique parking code and get the directions to your car.</p>
         </div>
       </div>    
     </div>
@@ -90,13 +103,13 @@
           <img href = "#" src =https://www.facilitiesbooking.com/wp-content/uploads/2022/04/qr_code_scan.jpg height="200px" width="200px">
         </div>
         <div class = content>
-          <h3>This is content</h3>
-          <p>DIn publishing and graphic design,Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+          <h3>Wish to register your car for this location</h3>
+          <p>If you are standing at the parking location and wish to know the details eg timing, applicable fare etc then this is the place. After entering details you will also get the qr and unique parking no through which you can locate your car anytime.</p>
         </div>
       </div>    
     </div>
-  
-    <div class="storing">
+
+    <div class="storing" id="storing">
       <div class="footer_new_image__mAqEk">
         <h1 class="footer_title__MJO1e">Our Platform Makes Any Equipment Interoperable.</h1>
         <p class="footer_subtitle__uPjj6">Traditional parking equipment operates in silos and at best might work
@@ -110,11 +123,11 @@
       </div>
       
     </div>
-    <footer class="footer-distributed">
+    <footer class="footer-distributed" id="footer1">
 
 			<div class="footer-left">
 
-				<h3>Company<span>logo</span></h3>
+				<div class="logo"><img src="osdc img18.png" style="width: 150px" height="100px"></div>
 
 				<p class="footer-links">
 					<a href="#" class="link-1">Home</a>
@@ -130,19 +143,19 @@
 					<a href="#">Contact</a>
 				</p>
 
-				<p class="footer-company-name">Company Name © 2015</p>
+				<p class="footer-company-name">ParkEzee © 2023</p>
 			</div>
 
 			<div class="footer-center">
 
 				<div>
 					<i class="fa fa-map-marker"></i>
-					<p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+					<p><span>444 S. Cedros Ave</span> Solana Beach, India</p>
 				</div>
 
 				<div>
 					<i class="fa fa-phone"></i>
-					<p>+1.555.555.5555</p>
+					<p>+91 1234567890</p>
 				</div>
 
 				<div>
@@ -155,8 +168,9 @@
 			<div class="footer-right">
 
 				<p class="footer-company-about">
-					<span>About the company</span>
-					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+					<span> Mission and Vision </span>
+					Parkezee was founded with the mission of being able to answer any parking question, anywhere in the world.
+          Parkezee allows drivers to find the closest parking to their destination, tells them how much it will cost and whether the space is available.... which means no more driving around looking for parking!
 				</p>
 
 				<div class="footer-icons">
