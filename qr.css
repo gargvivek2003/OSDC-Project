@@ -1,0 +1,218 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  min-height: 100vh;
+  /* padding: 0 10px; */
+  background: #E3F2FD;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+    height: 80px;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    list-style: none;
+  }
+  
+  .nav-links li a {
+    color: #ee2121;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+  }
+  
+  .nav-links li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-links li a:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .nav-links li a:hover {
+    color: #22664f;
+    font-size: 22px;
+    background-color: #ee2121;
+    border-radius: 8px;
+    padding: 4px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      right: 0px;
+      height: 92vh;
+      top: 80px;
+      background-color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+    }
+  
+    .nav-links li {
+      opacity: 0;
+    }
+  
+  }
+  
+  .nav-active {
+    transform: translateX(0%);
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+.wrapper{
+  height: 270px;
+  width: 420px;
+  border-radius: 7px;
+  background: #0B85FF;
+  padding: 30px 30px 35px;
+  transition: height 0.2s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.wrapper.active{
+  height: 525px;
+}
+.wrapper form{
+  height: 210px;
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  border-radius: 7px;
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.2s ease;
+}
+.wrapper.active form{
+  height: 225px;
+  pointer-events: none;
+}
+form img{
+  display: none;
+  max-width: 148px;
+}
+.wrapper.active form img{
+  display: block;
+}
+.wrapper.active form .content{
+  display: none;
+}
+form .content i{
+  color: #0B85FF;
+  font-size: 55px;
+}
+form .content p{
+  color: #0B85FF;
+  margin-top: 15px;
+  font-size: 16px;
+}
+.wrapper .details{
+  opacity: 0;
+  margin-top: 25px;
+  pointer-events: none;
+}
+.wrapper.active .details{
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+.details textarea{
+  width: 100%;
+  height: 128px;
+  outline: none;
+  resize: none;
+  color: #fff;
+  font-size: 18px;
+  background: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  border: 1px solid #fff;
+}
+textarea::-webkit-scrollbar{
+  width: 0px;
+}
+textarea:hover::-webkit-scrollbar{
+  width: 5px;
+}
+textarea:hover::-webkit-scrollbar-track{
+  background: none;
+}
+textarea:hover::-webkit-scrollbar-thumb{
+  background: #fff;
+  border-radius: 8px;
+}
+.details .buttons{
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.buttons button{
+  height: 55px;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  color: #0B85FF;
+  border-radius: 5px;
+  background: #fff;
+  transition: transform 0.3s ease;
+  width: calc(100% / 2 - 10px);
+}
+.buttons button:active{
+  transform: scale(0.95);
+}
+
+@media (max-width: 450px) {
+  .wrapper{
+    padding: 25px;
+    height: 260px;
+  }
+  .wrapper.active{
+    height: 520px;
+  }
+}
