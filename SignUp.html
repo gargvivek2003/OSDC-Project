@@ -1,55 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animated SignUp From</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
 
-    <link rel="stylesheet" href="SignUp.css" />
-  </head>
-  <body>
-    <div class="SignUp_form_container">
-      <div class="SignUp_form">
-        <h3>Sign Up</h3>
-        <!-- <form action="index.html" method="post"> -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animated SignUp From</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <link rel="stylesheet" href="SignUp.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="logo"><img src="osdc img18.png" style="width: 100px" height="80px"></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="login.html">Logout/Login</a></li>
+    </ul>
+  </nav>
+  
+  <div class="SignUp_form_container">
+    <div class="SignUp_form">
+      <h3>Sign Up</h3>
+      <form action="index.html" id="myForm" onsubmit="return validateForm()">
         <div class="input_group">
           <i class="fa fa-user"></i>
-          <input type="text" placeholder="Name" class="input_text" autocomplete="off" name="name"/>
+          <input type="text" placeholder="Name" class="input_text" id="name" autocomplete="off" name="name" />
         </div>
         <div class="input_group">
           <i class="fa fa-envelope"></i>
-          <input type="text" placeholder="Email Id" class="input_text" autocomplete="off" name="emailId"/>
+          <input type="text" placeholder="Email Id" class="input_text" id="email" autocomplete="off" name="emailId" />
         </div>
         <div class="input_group">
           <i class="fa fa-phone"></i>
-          <input type="mobnum" placeholder="Mobile Number" class="input_text" autocomplete="off" name="MobileNum"/>
+          <input type="mobnum" placeholder="Mobile Number" class="input_text" id="Mobilenum" autocomplete="off" name="MobileNum" />
         </div>
         <div class="input_group">
           <i class="fa fa-unlock-alt"></i>
-          <input type="password" placeholder="Password" class="input_text" autocomplete="off" name="password"/>
+          <input type="password" placeholder="Password" class="input_text" id="password" autocomplete="off" name="password" />
         </div>
         <div class="input_group">
           <i class="fa fa-unlock-alt"></i>
-          <input type="password" placeholder="Confirm Password" class="input_text" autocomplete="off" name="confirmpassword"/>
+          <input type="password" placeholder="Confirm Password" class="input_text" id="confirm-password" autocomplete="off"
+            name="confirmpassword" />
         </div>
 
         <div class="button_group" id="SignUp_button">
-          <a href="index.html"> <input type="submit" class="btn btn-primary"> </a>
+          <input type="submit" class="btn btn-primary">
         </div>
-      <!-- </form> -->
-        <div class="fotter">
-          <a>Already have an account ?</a>
-          <a href="login.htm">Log In</a>
-        </div>
+      </form>
+      <div class="fotter">
+        <a>Already have an account ?</a>
+        <a href="login.html">Log In</a>
       </div>
     </div>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="SignUp.js"></script>
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="SignUp.js"></script>
+</body>
+
 </html>
